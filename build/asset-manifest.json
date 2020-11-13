@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.js": "/MegaHack-mercadoPago/build/static/js/main.f48ded56.chunk.js",
+    "main.js.map": "/MegaHack-mercadoPago/build/static/js/main.f48ded56.chunk.js.map",
+    "runtime-main.js": "/MegaHack-mercadoPago/build/static/js/runtime-main.687e0e3c.js",
+    "runtime-main.js.map": "/MegaHack-mercadoPago/build/static/js/runtime-main.687e0e3c.js.map",
+    "static/js/2.441af28c.chunk.js": "/MegaHack-mercadoPago/build/static/js/2.441af28c.chunk.js",
+    "static/js/2.441af28c.chunk.js.map": "/MegaHack-mercadoPago/build/static/js/2.441af28c.chunk.js.map",
+    "index.html": "/MegaHack-mercadoPago/build/index.html",
+    "precache-manifest.9a6d49de160cbe53787e0a537e9075e4.js": "/MegaHack-mercadoPago/build/precache-manifest.9a6d49de160cbe53787e0a537e9075e4.js",
+    "service-worker.js": "/MegaHack-mercadoPago/build/service-worker.js",
+    "static/js/2.441af28c.chunk.js.LICENSE.txt": "/MegaHack-mercadoPago/build/static/js/2.441af28c.chunk.js.LICENSE.txt",
+    "static/media/Header.svg": "/MegaHack-mercadoPago/build/static/media/Header.6e306daa.svg",
+    "static/media/ajuda.svg": "/MegaHack-mercadoPago/build/static/media/ajuda.5bc5895e.svg",
+    "static/media/assinaturas.svg": "/MegaHack-mercadoPago/build/static/media/assinaturas.6f2ba333.svg",
+    "static/media/atividade.svg": "/MegaHack-mercadoPago/build/static/media/atividade.ef9ef305.svg",
+    "static/media/back-portal-site.png": "/MegaHack-mercadoPago/build/static/media/back-portal-site.45a482bc.png",
+    "static/media/convide.svg": "/MegaHack-mercadoPago/build/static/media/convide.c69752b3.svg",
+    "static/media/desempenho.svg": "/MegaHack-mercadoPago/build/static/media/desempenho.b2db888c.svg",
+    "static/media/dinheiro.svg": "/MegaHack-mercadoPago/build/static/media/dinheiro.25cccfd3.svg",
+    "static/media/icoMobile.svg": "/MegaHack-mercadoPago/build/static/media/icoMobile.0d4a3fb8.svg",
+    "static/media/inicio.svg": "/MegaHack-mercadoPago/build/static/media/inicio.daf8efc3.svg",
+    "static/media/link.svg": "/MegaHack-mercadoPago/build/static/media/link.99c0ceb3.svg",
+    "static/media/negocio.svg": "/MegaHack-mercadoPago/build/static/media/negocio.d32bd131.svg",
+    "static/media/perfil.svg": "/MegaHack-mercadoPago/build/static/media/perfil.28ec5e9d.svg",
+    "static/media/produto1.jpg": "/MegaHack-mercadoPago/build/static/media/produto1.c0d0ac10.jpg",
+    "static/media/receber.svg": "/MegaHack-mercadoPago/build/static/media/receber.7fb017bd.svg",
+    "static/media/relatorio.svg": "/MegaHack-mercadoPago/build/static/media/relatorio.5c21a69e.svg",
+    "static/media/sair.svg": "/MegaHack-mercadoPago/build/static/media/sair.552b9380.svg",
+    "static/media/transferir.svg": "/MegaHack-mercadoPago/build/static/media/transferir.a32805c7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.687e0e3c.js",
+    "static/js/2.441af28c.chunk.js",
+    "static/js/main.f48ded56.chunk.js"
+  ]
+}
