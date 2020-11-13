@@ -2,10 +2,7 @@ import styled from 'styled-components';
 
 import { Button, FormControl, TextField } from '@material-ui/core';
 
-import ImageBackgroundPortalSite from '../../../assets/images/back-portal-site.png';
-
 export const Wrapper = styled.div`
-  background-image: url(${ImageBackgroundPortalSite});
   display: flex;
   flex-direction: column;
   height: 100%;

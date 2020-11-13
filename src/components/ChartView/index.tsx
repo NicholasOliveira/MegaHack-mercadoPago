@@ -44,7 +44,7 @@ function ChartView() {
             options={data.options}
             series={data.series}
             type="area"
-            width="350"
+            width="100%"
             height="auto"
           />
         </div>
