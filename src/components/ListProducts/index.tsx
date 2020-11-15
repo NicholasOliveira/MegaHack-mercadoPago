@@ -1,14 +1,14 @@
-import React from 'react';
+/* eslint-disable import/no-duplicates */
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { useSelector } from 'react-redux';
 import { ProductItem } from './styles';
-import ImgProduto1 from '../../assets/images/produto1.jpg';
 
 const useStyles = makeStyles({
   root: {
@@ -39,39 +39,16 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard({ title, Info, label, chart, link }: any) {
+export default function SimpleCard({ title }: any) {
   const classes = useStyles();
+  const [productsData, setProductsData] = useState([]);
+  const fetchData = useSelector((state: any) => state.fulldataAddSucess);
 
-  const products = [
-    {
-      id: '1',
-      img: ImgProduto1,
-      title: 'Sapato prateado salto baixo',
-      vendas: 0,
-      receita: 'R$ 0,00',
-      estoque: 5,
-      ultimaVenda: '12/10/2020',
-    },
-    {
-      id: '1',
-      img: ImgProduto1,
-      title: 'Sapato prateado salto baixo',
-      vendas: 0,
-      receita: 'R$ 0,00',
-      estoque: 5,
-      ultimaVenda: '12/10/2020',
-    },
-    {
-      id: '1',
-      img: ImgProduto1,
-      title: 'Sapato prateado salto baixo',
-      vendas: 0,
-      receita: 'R$ 0,00',
-      estoque: 5,
-      ultimaVenda: '12/10/2020',
-    },
-  ];
-
+  useEffect(() => {
+    if (fetchData.length > 0) {
+      setProductsData(fetchData[0].wharehouse);
+    }
+  }, [fetchData]);
   return (
     <Card className={classes.root}>
       <CardContent>
@@ -84,34 +61,37 @@ export default function SimpleCard({ title, Info, label, chart, link }: any) {
           {title}
         </Typography>
 
-        {products.map((product: any) => (
-          <ProductItem key={product.id}>
+        {productsData.map((product: any) => (
+          <ProductItem key={product.product.id}>
             <div>
               <ChevronRightIcon />
-              <img src={product.img} alt={product.title} />
+              <img
+                src={product.product.product_image}
+                alt={product.product.product_name}
+              />
             </div>
-            <h4>
-              {product.title}
+            <h4 style={{ width: '200px', textAlign: 'left' }}>
+              {product.product.product_name}
               <br />
               <span>4 variantes</span>
             </h4>
             <h4>
-              {product.vendas}
+              {product.sell_quantity}
               <br />
               <span>Vendas</span>
             </h4>
             <h4>
-              {product.receita}
+              {product.FormatedMoney}
               <br />
               <span>Receita</span>
             </h4>
             <h4>
-              {product.estoque}
+              {product.available}
               <br />
               <span>Estoque</span>
             </h4>
             <h4>
-              {product.ultimaVenda}
+              {product.ultimavendaFormatada}
               <br />
               <span>Última venda</span>
             </h4>

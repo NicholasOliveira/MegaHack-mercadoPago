@@ -1,11 +1,12 @@
 import React from 'react';
+import RoboMeli from '../RoboMeli';
 
 import { Container, FooterContain } from './styles';
 
 const Footer = () => {
   return (
     <Container>
-      <FooterContain>Footer</FooterContain>
+      <RoboMeli />
     </Container>
   );
 };

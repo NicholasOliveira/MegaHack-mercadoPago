@@ -62,7 +62,7 @@ export default function SimpleCard({ title, Info, label, chart, link }: any) {
           <ArrowDropDownIcon className={classes.svg} />
           {label.valor}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography variant="body2" component="div">
           {chart}
         </Typography>
       </CardContent>

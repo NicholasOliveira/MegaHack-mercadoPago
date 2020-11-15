@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { dataReducer } from './test/reducer';
+import fulldataAddSucess from './fullData/reducer';
 
-const rootReducer = combineReducers({ data: dataReducer });
+const rootReducer = combineReducers({ fulldataAddSucess });
 
 export default rootReducer;
