@@ -1,7 +1,7 @@
 import React from 'react';
 import RoboMeli from '../RoboMeli';
 
-import { Container, FooterContain } from './styles';
+import { Container } from './styles';
 
 const Footer = () => {
   return (

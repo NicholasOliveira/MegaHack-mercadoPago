@@ -26,6 +26,7 @@ export const ChatMsgItem = styled.li`
   border-radius: 5px;
   margin: 10px;
   text-align: left;
+  text-transform: capitalize;
 `;
 
 export const Labels = styled.div`

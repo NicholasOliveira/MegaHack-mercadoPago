@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Chart from 'react-apexcharts';
 
-function ChartView() {
+function ChartView({numberSerie}:any) {
   const [data, setData] = useState({
     options: {
       chart: {
@@ -26,7 +26,7 @@ function ChartView() {
       {
         name: 'Series 1',
         data: [
-          [1486684800000, 34],
+          [1486684800000, numberSerie],
           [1486771200000, 43],
           [1486857600000, 31],
           [1486944000000, 43],

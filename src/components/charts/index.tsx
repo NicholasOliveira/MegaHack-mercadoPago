@@ -55,7 +55,7 @@ export default function SimpleCard({ title, Info, label, chart, link }: any) {
           {Info}
         </Typography>
         <Typography
-          style={{ backgroundColor: '#FFE010' }}
+          style={{ backgroundColor: label.cor }}
           className={classes.pos}
           color="textSecondary"
         >

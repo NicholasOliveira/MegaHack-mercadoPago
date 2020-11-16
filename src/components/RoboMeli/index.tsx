@@ -7,6 +7,7 @@ import microphone from '../../assets/images/microphone.svg';
 import microphone2 from '../../assets/images/microphone2.svg';
 import waveGif from '../../assets/images/wave.gif';
 import dots from '../../assets/images/dots.gif';
+import api from '../../services/MockedApi';
 
 import {
   Container,
@@ -22,8 +23,8 @@ const Footer = () => {
   const [activeVoz, setactive] = useState(false);
   const [activeText, setativeText] = useState('');
   const [activeDots, setactiveDots] = useState(false);
-  const [chatOpen, setchatOpen] = useState(true);
-  const [listMsgs, setListMsgs] = useState([{}]);
+  const [chatOpen, setchatOpen] = useState(false);
+  const [listMsgs, setListMsgs] = useState([{ msg: '', userId: 0 }]);
   const messagesEndRef: any = useRef(null);
   const { transcript, resetTranscript } = useSpeechRecognition();
 
@@ -31,7 +32,38 @@ const Footer = () => {
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(scrollToBottom, [listMsgs]);
+  useEffect(() => {
+    scrollToBottom();
+    const speak = (text: any) => {
+      const options = new SpeechSynthesisUtterance(text);
+      options.lang = 'pt-BR';
+      window.speechSynthesis.speak(options);
+    };
+    async function resquestData() {
+      const response = await api.get(
+        `products/message/${listMsgs[listMsgs.length - 1].msg}`
+      );
+      let indice = 0;
+      for (let i = 0; i < response.data.length; i++) {
+        if (typeof response.data[i] === 'object') {
+          indice = i;
+          break;
+        }
+      }
+
+      setListMsgs([
+        ...listMsgs,
+        { msg: response.data[indice].resposta, userId: 1 },
+      ]);
+      /*       if (typeof response.data[indice].resposta !== 'object') {
+        speak('Não entendi sua pergunta, digite, fale ou clique nas sugestões');
+      } */
+      speak(response.data[indice].resposta);
+    }
+    if (typeof listMsgs[listMsgs.length - 1].msg !== 'undefined') {
+      resquestData();
+    }
+  }, [listMsgs]);
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return null;
@@ -67,13 +99,13 @@ const Footer = () => {
   }
   const msgLabels = [
     {
-      msg: 'Previsão futura de produtos',
+      msg: 'previsão futura de produtos',
     },
     {
-      msg: 'Em quais produtos investir ?',
+      msg: 'qual produto devo investir',
     },
     {
-      msg: 'Em quais produtos investir ?',
+      msg: 'previsão futura de vendas',
     },
   ];
   return (
@@ -81,7 +113,7 @@ const Footer = () => {
       <ChatMeli style={chatOpen ? { display: 'block' } : { display: 'none' }}>
         <ChatMsgs>
           {listMsgs.map((msg: any, index: number) => {
-            return msg.msg !== undefined ? (
+            return msg.msg !== undefined && msg.msg !== '' ? (
               <ChatMsgItem
                 key={index}
                 className={msg.userId === 1 ? 'Right' : 'Left'}

@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/desempenho",
   "dependencies": {
     "@babel/core": "7.6.0",
     "@material-ui/core": "^4.7.2",
@@ -77,6 +78,7 @@
     "style-loader": "1.0.0",
     "styled-components": "^4.4.1",
     "terser-webpack-plugin": "1.4.1",
+    "text-to-speech-js": "^1.1.10",
     "ts-pnp": "1.1.4",
     "typescript": "3.7.2",
     "url-loader": "2.1.0",
