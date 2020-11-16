@@ -2,11 +2,18 @@
 
 ## **Intro**
 
-Um texto bem legal aqui.
+Criamos a Meli, assistente financeira que, através de dados, auxilia os empreendedores na tomada de decisão, visando o crescimento do negócio. Por meio dos dados do catálogo do produto e performance de vendas, a Meli será capaz de proporcionar: análise de dados de performance & insights, gestão de estoque, previsão futura de resultados e análise de dados de mercado para trazer sugestões para o negócio. A Meli funciona por comando de voz e texto, sendo acessível a todos.
 
 ## **Guia**
 
-Outro texto diferente bem legal aqui.
+algumas perguntas que podem ser feitas para a meli:
+
+1 - previsão futura de produtos
+1.1 - este modelo está em falta no fornecedor
+2 - qual produto devo investir
+3 - previsão futura de vendas
+
+podem ser feitas perguntas por voz ou texto.
 
 ## **O que temos neste projeto?**
 
