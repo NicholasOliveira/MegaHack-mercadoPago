@@ -8,12 +8,12 @@ Criamos a Meli, assistente financeira que, através de dados, auxilia os empreen
 
 algumas perguntas que podem ser feitas para a meli:
 
-1 - previsão futura de produtos
-1.1 - este modelo está em falta no fornecedor
-2 - qual produto devo investir
-3 - previsão futura de vendas
+- 1 - previsão futura de produtos
+- 1.1 - este modelo está em falta no fornecedor
+- 2 - qual produto devo investir
+- 3 - previsão futura de vendas
 
-podem ser feitas perguntas por voz ou texto.
+- podem ser feitas perguntas por voz ou texto.
 
 ## **O que temos neste projeto?**
 
